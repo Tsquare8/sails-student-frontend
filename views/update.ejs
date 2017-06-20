@@ -8,11 +8,11 @@
 
 <form action="#" method="">
   <div class="form-group">
-    <label for="employeeId">SELECT AN STUDENT TO UPDATE</label><br/>
-    <select id="employeeId" name="employeeId">
+    <label for="student_id">SELECT AN STUDENT TO UPDATE</label><br/>
+    <select id="student_id" name="student_id">
     <% if(typeof students != "undefined" && students.length > 0){ %>
       <% students.forEach(function(student){ %>
-        <option value="<%= student.student_id %>">
+        <option class="glyphicon glyphicon-user" value="<%= student.student_id %>">
           <%= student.last_name + ", " +  student.first_name %>
         </option>
       <% }) %>

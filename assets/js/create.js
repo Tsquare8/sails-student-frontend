@@ -24,12 +24,46 @@
  *
  */
 
-(function(){
+(function() {
 
-  $(function(){
+  $(function() {
 
-  	//code goes here
-
+    $("#addStudentForm").validate({
+      // debug: true,
+      errorClass: "text-danger",
+      rules: {
+        first_name: {
+          required: true,
+          minlength: 2
+        },
+        last_name: {
+          required: true,
+          minlength: 2
+        },
+        start_date: {
+          required: true,
+          dateISO: true
+        },
+        sat: {
+          maxlength: 4
+        }
+      },
+      messages: {
+        first_name: {
+          required: "First name is a required field",
+          minlength: jQuery.validator.format("First name needs to have at least 2 characters")
+        },
+        last_name: {
+          required: "Last name is a required field",
+          minlength: jQuery.validator.format("First name needs to have at least 2 characters")
+        },
+        start_date: {
+          required: "Start_date is a required field"
+        },
+        sat: {
+          maxlength: jQuery.validator.format("SAT is a maximum of 4 characters")
+        }
+      }
+    });
   })
-
 })();

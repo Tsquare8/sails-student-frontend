@@ -27,12 +27,18 @@
  *
  */
 
- (function(){
+(function() {
 
-   $(function(){
+  $(function() {
 
-   	//code goes here
+    //render dropdown, live search for searchable dropdown and add menu header
+    $('#student_id').selectpicker({
+      style: 'btn-info',
+      size: 10,
+      liveSearch: true,
+      header: "Select a student to delete."
+    })
 
-   })
+  })
 
- })();
+})();
